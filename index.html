@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- <meta charset="iso-8859-1"> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tranformação de Bases Numéricas</title>
+  </head>
+  <body>
+
+    <h1>Conversor de bases </h1>
+
+    <div class="blurred-container">
+      <div class="content">
+        <input style="float:left;" class="base" type="radio" name="base" value="10">
+        <label style="float:left;" >Decimal</label>
+        <input style="float:right;" class="field" type="text"><br><br>
+        <input style="float:left;" class="base" type="radio" name="base" value="2">
+        <label style="float:left;">Binário</label>
+        <input style="float:right;" class="field" type="text" ><br><br>
+        <input style="float:left;" class="base" type="radio" name="base" value="8">
+        <label style="float:left;">Octal</label>
+        <input style="float:right;" class="field" type="text" ><br><br>
+        <input style="float:left;" class="base" type="radio" name="base" value="16">
+        <label style="float:left;">Hexadecimal</label>
+        <input class="field" type="text">
+      </div>
+    </div>
+
+    <h1>Soma/Subtração</h1>
+
+    <div class="blurred-container">
+      <div class="content">
+        <select name="selecao">
+          <option value="2">Binário</option>
+          <option value="8">Octal</option>
+          <option value="16">Hexadecimal</option>
+        </select><br><br>
+        <input type="text" class="valores" placeholder="Digite um valor" onkeyup="preventKeywords(this)"><br>
+        <input type="radio" name="operador" class="operador" value="+" checked>
+        <label>+</label>
+        <input type="radio" name="operador" class="operador" value="-">
+        <label>-</label><br>
+        <input type="text" class="valores" placeholder="Digite outro valor" onkeyup="preventKeywords(this)"><br><br>
+        <input type="button" name="calcular" class="calculateBtn" value="Calcular">
+        <h3 id="resultado"></h3>
+      </div>
+    </div>
+
+  <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  background: url(images/1n0.jpg) no-repeat center center fixed;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #fae8c8;
+  font-family: montserrat, sans-serif;
+  text-shadow: 2px 2px 5px #3c9d91;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.blurred-container {
+  margin:0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: inherit;
+  height: 50vh;
+  background-attachment: fixed;
+}
+
+.content {
+  text-align: center;
+  color: white;
+  padding: 0;
+}
+
+.blurred-container .content {
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+  max-width: 600px;
+  background: inherit;
+  border-radius: 12px;
+  box-shadow: 10px 7px 50px 10px rgba(255, 255, 255, 0.2);
+}
+
+.blurred-container .content::before {
+  content: "";
+  position: absolute;
+  left:-20px;
+  right:-20px;
+  top:-20px;
+  bottom: -20px;
+  background: inherit;
+  filter: blur(12px);
+}
+
+.blurred-container .content input {
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  height: 20px;
+}
+
+.blurred-container .content label,
+.blurred-container .content select,
+.blurred-container .content h3 {
+  color: #3c9d91;
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+  font-family: montserrat, sans-serif;
+}
+
+select {
+  font-size: 17px;
+}
+
+label {
+  font-size: 20px;
+}
+
+.valores {
+  width:250px;
+}
+
+.operador {
+  margin: 10px 0;
+}
+
+.calculateBtn {
+  color: white;
+  background: #3c9d91;
+  border-radius: 28px;
+  font-size: 15px;
+  border: 0;
+}
+
+@media (max-width: 500px) {
+  body {
+    background: url(images/1n0_mobile.jpg) no-repeat center center fixed;
+    /* background-image: linear-gradient( 109.6deg,  rgba(20,30,48,1) 11.2%, rgba(36,59,85,1) 91.1% ); */
+  }
+}
